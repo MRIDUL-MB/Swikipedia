@@ -1,0 +1,94 @@
+.searchEntry{
+    @include flexColumn;
+    padding-top:40px ;
+    .logo{
+        font-size: 2rem;
+        letter-spacing: -5px;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        @include mq(768px){
+            font-size: 4rem;
+            letter-spacing: -10px;
+        }
+    }
+    .searchBar{
+        width: 90vw;
+        display: flex;
+        border: 2px solid $search-bar-border;
+        border-radius: 500px;
+        padding: 0.15rem 0.25rem 0.15rem 0.75rem;
+        @include mq(768px){
+            width: 80vw;
+            padding: 0.5rem 1rem;
+        }
+        @include mq(1000px){
+            width: 50vw;
+            padding:0.5rem 1rem ;
+        }
+        
+        input[type="text"] {
+            flex-grow: 1;
+            min-width: 150px;
+            border: 0;
+            outline: none;
+            font-size: 0.75rem;
+            letter-spacing: 0.1rem;
+            text-align: left;
+            @include mq(768px){
+                font-size: 1.25rem;
+            }
+        }
+        .button{
+            cursor: pointer;
+            background-color: transparent;
+            border: 0;
+            outline: none;
+            min-width: 48px;
+            min-height: 48px;
+
+            i{
+                font-family: "Font Awesome 5 Free";
+                font-size: 1rem;
+                @include mq(768px){
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        .button:hover,.button:focus{
+            i{
+                padding-bottom: 0.5rem;
+                border-bottom-style:solid;
+                border-bottom-width: 1px;
+            }
+        }
+        .searchButton:focus, .searchButton:hover{
+            i{
+                color: $logo-green;
+            }
+        }
+        .searchButton{
+            @include mq(768px){
+                padding-left: 1rem;
+            }
+        }
+        .clear:hover,.clear:focus{
+            i{
+                color: $logo-red;
+            }
+        }
+        .clear{
+            // border: 1px solid;
+            // display:flex;
+            justify-content: center;
+            align-items: center;
+            color: $stats-color;
+            border-right: thin solid $clear-button-color;
+            @include mq(768px){
+                padding: 0 1rem;
+            }
+        }
+    }
+    .searchBar:focus-within,.searchBar:hover{
+        box-shadow: 0px 2px 5px 2px $search-bar-border;
+    }
+}

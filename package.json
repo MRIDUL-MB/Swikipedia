@@ -1,0 +1,14 @@
+{
+  "name": "searc_me",
+  "version": "1.0.0",
+  "description": "Wikipedia Powered Search App",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mridul Bagla",
+  "license": "ISC",
+  "dependencies": {
+    "build": "^0.1.4"
+  }
+}
